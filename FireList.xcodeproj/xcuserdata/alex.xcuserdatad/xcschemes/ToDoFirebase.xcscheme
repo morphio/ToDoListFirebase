@@ -17,7 +17,7 @@
                BlueprintIdentifier = "FAF025DD1E8459AA000947BF"
                BuildableName = "ToDoFirebase.app"
                BlueprintName = "ToDoFirebase"
-               ReferencedContainer = "container:ToDoFirebase.xcodeproj">
+               ReferencedContainer = "container:FireList.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
             BlueprintIdentifier = "FAF025DD1E8459AA000947BF"
             BuildableName = "ToDoFirebase.app"
             BlueprintName = "ToDoFirebase"
-            ReferencedContainer = "container:ToDoFirebase.xcodeproj">
+            ReferencedContainer = "container:FireList.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -58,7 +58,7 @@
             BlueprintIdentifier = "FAF025DD1E8459AA000947BF"
             BuildableName = "ToDoFirebase.app"
             BlueprintName = "ToDoFirebase"
-            ReferencedContainer = "container:ToDoFirebase.xcodeproj">
+            ReferencedContainer = "container:FireList.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -77,7 +77,7 @@
             BlueprintIdentifier = "FAF025DD1E8459AA000947BF"
             BuildableName = "ToDoFirebase.app"
             BlueprintName = "ToDoFirebase"
-            ReferencedContainer = "container:ToDoFirebase.xcodeproj">
+            ReferencedContainer = "container:FireList.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

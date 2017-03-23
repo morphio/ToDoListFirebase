@@ -182,7 +182,7 @@
 					};
 				};
 			};
-			buildConfigurationList = FAF025D91E8459AA000947BF /* Build configuration list for PBXProject "ToDoFirebase" */;
+			buildConfigurationList = FAF025D91E8459AA000947BF /* Build configuration list for PBXProject "FireList" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -418,7 +418,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FAF025D91E8459AA000947BF /* Build configuration list for PBXProject "ToDoFirebase" */ = {
+		FAF025D91E8459AA000947BF /* Build configuration list for PBXProject "FireList" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FAF025EE1E8459AA000947BF /* Debug */,
