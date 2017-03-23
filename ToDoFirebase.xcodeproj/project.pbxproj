@@ -17,6 +17,7 @@
 		FAF025FD1E8462DA000947BF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF025FC1E8462DA000947BF /* SignUpViewController.swift */; };
 		FAF025FF1E846351000947BF /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF025FE1E846351000947BF /* ResetPasswordViewController.swift */; };
 		FAF026031E8463D6000947BF /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF026021E8463D6000947BF /* AddTaskViewController.swift */; };
+		FAF026051E84648D000947BF /* TodoListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF026041E84648D000947BF /* TodoListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		FAF025FC1E8462DA000947BF /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		FAF025FE1E846351000947BF /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		FAF026021E8463D6000947BF /* AddTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		FAF026041E84648D000947BF /* TodoListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 		FAF025F71E846237000947BF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FAF026041E84648D000947BF /* TodoListTableViewController.swift */,
 				FAF025FA1E846297000947BF /* LoginViewController.swift */,
 				FAF025FC1E8462DA000947BF /* SignUpViewController.swift */,
 				FAF025FE1E846351000947BF /* ResetPasswordViewController.swift */,
@@ -269,6 +272,7 @@
 				FAF025FB1E846297000947BF /* LoginViewController.swift in Sources */,
 				FAF025E21E8459AA000947BF /* AppDelegate.swift in Sources */,
 				FAF025FF1E846351000947BF /* ResetPasswordViewController.swift in Sources */,
+				FAF026051E84648D000947BF /* TodoListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
