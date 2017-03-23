@@ -1,5 +1,5 @@
 //
-//  ToDoListViewController.swift
+//  AddTaskViewController.swift
 //  ToDoFirebase
 //
 //  Created by Alex on 23.03.17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ToDoListViewController: UIViewController {
+class AddTaskViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
