@@ -255,7 +255,7 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eah-gS-PK0">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
-                                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     <state key="normal" title="Back">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
@@ -272,6 +272,34 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="50" id="vD6-E7-SiC">
+                                        <rect key="frame" x="0.0" y="577" width="375" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vD6-E7-SiC" id="nGU-5U-uJA">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wAd-MQ-h6C">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                                                    <color key="backgroundColor" red="1" green="0.33673078979999999" blue="0.301043809" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <state key="normal" title="Reset Pasword">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <segue destination="5KS-sd-YRW" kind="popoverPresentation" popoverAnchorView="wAd-MQ-h6C" id="00W-uR-M6J">
+                                                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                                        </segue>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="wAd-MQ-h6C" firstAttribute="leading" secondItem="nGU-5U-uJA" secondAttribute="leading" id="P8y-qf-AK4"/>
+                                                <constraint firstAttribute="trailing" secondItem="wAd-MQ-h6C" secondAttribute="trailing" id="WcQ-ns-00w"/>
+                                                <constraint firstAttribute="bottom" secondItem="wAd-MQ-h6C" secondAttribute="bottom" id="ejM-QM-2Fa"/>
+                                                <constraint firstItem="wAd-MQ-h6C" firstAttribute="top" secondItem="nGU-5U-uJA" secondAttribute="top" id="vfj-2T-uX7"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -285,10 +313,10 @@
             </objects>
             <point key="canvasLocation" x="832.5" y="33.802816901408448"/>
         </scene>
-        <!--View Controller-->
+        <!--Reset Password View Controller-->
         <scene sceneID="ZEJ-w4-YK5">
             <objects>
-                <viewController id="5KS-sd-YRW" sceneMemberID="viewController">
+                <viewController id="5KS-sd-YRW" customClass="ResetPasswordViewController" customModule="ToDoFirebase" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="S6B-bC-0UX"/>
                         <viewControllerLayoutGuide type="bottom" id="Y7o-iY-1lE"/>
@@ -296,16 +324,64 @@
                     <view key="view" contentMode="scaleToFill" id="Nh6-s8-ann">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2yL-3X-l8Z">
+                                <rect key="frame" x="47" y="95" width="280" height="270"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i5V-h3-T5k">
+                                        <rect key="frame" x="0.0" y="217" width="280" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Back">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="dvi-cW-ZOM" kind="popoverPresentation" popoverAnchorView="i5V-h3-T5k" id="FpF-MC-mh4">
+                                                <popoverArrowDirection key="popoverArrowDirection" down="YES"/>
+                                            </segue>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGq-6b-nPJ">
+                                        <rect key="frame" x="0.0" y="164" width="280" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.0" green="0.46536993450000003" blue="0.9650027712" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Reset My Password">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type Your Email" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="0j4-CU-AnK">
+                                        <rect key="frame" x="0.0" y="100" width="280" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="0EC-I6-mMR"/>
+                                    <constraint firstAttribute="height" constant="270" id="aMg-OI-bsh"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="0.92061019840000002" green="0.90066676830000003" blue="0.13388658149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2yL-3X-l8Z" firstAttribute="top" secondItem="S6B-bC-0UX" secondAttribute="bottom" constant="75" id="XTz-v6-7G5"/>
+                            <constraint firstItem="2yL-3X-l8Z" firstAttribute="centerX" secondItem="Nh6-s8-ann" secondAttribute="centerX" id="siN-p5-bG1"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FvR-6W-xLc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1510" y="38"/>
+            <point key="canvasLocation" x="2038" y="34"/>
         </scene>
     </scenes>
     <resources>
         <image name="ToDoIcon" width="512" height="512"/>
         <image name="user_placeholder" width="600" height="600"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="FpF-MC-mh4"/>
+    </inferredMetricsTieBreakers>
 </document>
