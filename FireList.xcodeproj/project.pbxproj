@@ -14,7 +14,7 @@
 		FAF025EC1E8459AA000947BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAF025EA1E8459AA000947BF /* LaunchScreen.storyboard */; };
 		FAF025F41E845B55000947BF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAF025F31E845B55000947BF /* GoogleService-Info.plist */; };
 		FAF025FB1E846297000947BF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF025FA1E846297000947BF /* LoginViewController.swift */; };
-		FAF025FD1E8462DA000947BF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF025FC1E8462DA000947BF /* SignUpViewController.swift */; };
+		FAF025FD1E8462DA000947BF /* SignUpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF025FC1E8462DA000947BF /* SignUpTableViewController.swift */; };
 		FAF025FF1E846351000947BF /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF025FE1E846351000947BF /* ResetPasswordViewController.swift */; };
 		FAF026031E8463D6000947BF /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF026021E8463D6000947BF /* AddTaskViewController.swift */; };
 		FAF026051E84648D000947BF /* TodoListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF026041E84648D000947BF /* TodoListTableViewController.swift */; };
@@ -32,7 +32,7 @@
 		FAF025ED1E8459AA000947BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAF025F31E845B55000947BF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FAF025FA1E846297000947BF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		FAF025FC1E8462DA000947BF /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		FAF025FC1E8462DA000947BF /* SignUpTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpTableViewController.swift; sourceTree = "<group>"; };
 		FAF025FE1E846351000947BF /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		FAF026021E8463D6000947BF /* AddTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 		FAF026041E84648D000947BF /* TodoListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoListTableViewController.swift; sourceTree = "<group>"; };
@@ -122,7 +122,7 @@
 			children = (
 				FAF026041E84648D000947BF /* TodoListTableViewController.swift */,
 				FAF025FA1E846297000947BF /* LoginViewController.swift */,
-				FAF025FC1E8462DA000947BF /* SignUpViewController.swift */,
+				FAF025FC1E8462DA000947BF /* SignUpTableViewController.swift */,
 				FAF025FE1E846351000947BF /* ResetPasswordViewController.swift */,
 				FAF026021E8463D6000947BF /* AddTaskViewController.swift */,
 			);
@@ -267,7 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAF025FD1E8462DA000947BF /* SignUpViewController.swift in Sources */,
+				FAF025FD1E8462DA000947BF /* SignUpTableViewController.swift in Sources */,
 				FAF026031E8463D6000947BF /* AddTaskViewController.swift in Sources */,
 				FAF025FB1E846297000947BF /* LoginViewController.swift in Sources */,
 				FAF025E21E8459AA000947BF /* AppDelegate.swift in Sources */,

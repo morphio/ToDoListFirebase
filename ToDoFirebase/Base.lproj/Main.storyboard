@@ -64,7 +64,7 @@
                                         <rect key="frame" x="0.0" y="270" width="280" height="45"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="0.33673078979999999" blue="0.301043809" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Button">
+                                        <state key="normal" title="Reset Password">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -109,10 +109,10 @@
             </objects>
             <point key="canvasLocation" x="22.5" y="32.74647887323944"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Sign Up Table View Controller-->
         <scene sceneID="LNf-dp-T65">
             <objects>
-                <tableViewController id="dvi-cW-ZOM" sceneMemberID="viewController">
+                <tableViewController id="dvi-cW-ZOM" customClass="SignUpTableViewController" customModule="ToDoFirebase" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="VKe-lm-d5S">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -273,6 +273,9 @@
                                                     <state key="normal" title="Back">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <segue destination="tqB-kw-f3u" kind="unwind" unwindAction="unwindToLogInStoryboard:" id="Syc-Ef-7nh"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -293,6 +296,7 @@
                     </tableView>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eha-av-1Qc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="tqB-kw-f3u" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1286" y="34"/>
         </scene>
@@ -318,6 +322,9 @@
                                         <state key="normal" title="Back">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="K7z-a5-3eg" kind="unwind" unwindAction="unwindToLogInStoryboard:" id="U5r-FX-x0x"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGq-6b-nPJ">
                                         <rect key="frame" x="0.0" y="164" width="280" height="45"/>
@@ -359,6 +366,7 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FvR-6W-xLc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="K7z-a5-3eg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1286" y="-656"/>
         </scene>
