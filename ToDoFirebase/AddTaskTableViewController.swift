@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddTaskViewController: UIViewController {
+class AddTaskTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
