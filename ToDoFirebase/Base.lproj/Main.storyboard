@@ -138,10 +138,10 @@
             </objects>
             <point key="canvasLocation" x="22.5" y="32.74647887323944"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="q2N-XR-SL2">
             <objects>
-                <viewController id="ic9-NP-sCr" sceneMemberID="viewController">
+                <viewController id="ic9-NP-sCr" customClass="SignUpViewController" customModule="ToDoFirebase" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2le-gr-uTs"/>
                         <viewControllerLayoutGuide type="bottom" id="8vK-0V-d1v"/>
@@ -150,8 +150,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="WyW-za-RdO" customClass="ProfileImageView" customModule="ToDoFirebase" customModuleProvider="target">
-                                <rect key="frame" x="137" y="67" width="140" height="140"/>
+                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="WyW-za-RdO" customClass="ProfileImageView" customModule="ToDoFirebase" customModuleProvider="target">
+                                <rect key="frame" x="137" y="66" width="140" height="140"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="140" id="M4C-oR-Fph"/>
                                     <constraint firstAttribute="width" constant="140" id="sQT-oP-Ewi"/>
@@ -164,9 +165,12 @@
                                         <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="abU-vk-he3" appends="YES" id="dSo-hd-lf1"/>
+                                </connections>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CiE-9n-X9x">
-                                <rect key="frame" x="168" y="27.999999999999996" width="78" height="30.666666666666661"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a Picture" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CiE-9n-X9x">
+                                <rect key="frame" x="123.33333333333331" y="28" width="167.33333333333337" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="eGc-ln-LYU"/>
                                 </constraints>
@@ -175,7 +179,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gUM-Ir-eFF">
-                                <rect key="frame" x="12" y="215" width="390" height="521"/>
+                                <rect key="frame" x="12" y="214" width="390" height="522"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W8P-Es-C4o" customClass="CustomTextField" customModule="ToDoFirebase" customModuleProvider="target">
                                         <rect key="frame" x="8" y="8" width="374" height="60"/>
@@ -251,14 +255,17 @@
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="signUpButton:" destination="ic9-NP-sCr" eventType="touchUpInside" id="bjv-La-beB"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5dB-Ak-M9b" customClass="CustomButton" customModule="ToDoFirebase" customModuleProvider="target">
                                         <rect key="frame" x="8" y="356.66666666666663" width="374" height="60"/>
-                                        <color key="backgroundColor" red="0.053012309809999998" green="0.22995738590000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="5dB-Ak-M9b" secondAttribute="height" multiplier="56:9" id="8bz-T9-VPQ"/>
                                         </constraints>
-                                        <state key="normal" title="Button">
+                                        <state key="normal" title="Back">
                                             <color key="titleColor" white="0.96999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -266,6 +273,9 @@
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="tNP-lg-htP" kind="unwind" unwindAction="unwindToLogInStoryboard:" id="XrF-5z-Yfq"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -306,8 +316,21 @@
                             <constraint firstItem="gUM-Ir-eFF" firstAttribute="leading" secondItem="z3O-Ae-FSD" secondAttribute="leading" constant="12" id="x0L-4l-R1p"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="countryTextField" destination="ss8-4N-IVu" id="8kO-zY-WeK"/>
+                        <outlet property="emailTextField" destination="uI9-OT-5Qc" id="oDO-aN-MOZ"/>
+                        <outlet property="passwordTestField" destination="U2T-hn-X8W" id="1M4-F7-6j2"/>
+                        <outlet property="userImageView" destination="WyW-za-RdO" id="Om0-5n-RZ7"/>
+                        <outlet property="usernameTextField" destination="W8P-Es-C4o" id="s7i-Ia-bM7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ihv-E2-KSO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="tNP-lg-htP" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="abU-vk-he3">
+                    <connections>
+                        <action selector="choosePictureAction:" destination="ic9-NP-sCr" id="EZx-FZ-fyw"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="960" y="518.66197183098598"/>
         </scene>
