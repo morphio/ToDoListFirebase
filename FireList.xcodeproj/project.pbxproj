@@ -11,6 +11,7 @@
 		FA5313BB1E8C772100CBAA2C /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5313BA1E8C772100CBAA2C /* ProfileImageView.swift */; };
 		FA5313BD1E8C7B1200CBAA2C /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5313BC1E8C7B1200CBAA2C /* CustomButton.swift */; };
 		FA5313BF1E8C7D5C00CBAA2C /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5313BE1E8C7D5C00CBAA2C /* CustomTextField.swift */; };
+		FAECB44A1E919035000BDCD1 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAECB4491E919035000BDCD1 /* Server.swift */; };
 		FAF025E21E8459AA000947BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF025E11E8459AA000947BF /* AppDelegate.swift */; };
 		FAF025E71E8459AA000947BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAF025E51E8459AA000947BF /* Main.storyboard */; };
 		FAF025E91E8459AA000947BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAF025E81E8459AA000947BF /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 		FA5313BA1E8C772100CBAA2C /* ProfileImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileImageView.swift; sourceTree = "<group>"; };
 		FA5313BC1E8C7B1200CBAA2C /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		FA5313BE1E8C7D5C00CBAA2C /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		FAECB4491E919035000BDCD1 /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		FAF025DE1E8459AA000947BF /* ToDoFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoFirebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF025E11E8459AA000947BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAF025E61E8459AA000947BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 		FAF025F81E846244000947BF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FAECB4491E919035000BDCD1 /* Server.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				FAF026031E8463D6000947BF /* AddTaskTableViewController.swift in Sources */,
 				FAF025FB1E846297000947BF /* LoginViewController.swift in Sources */,
 				FA5313BD1E8C7B1200CBAA2C /* CustomButton.swift in Sources */,
+				FAECB44A1E919035000BDCD1 /* Server.swift in Sources */,
 				FAF025E21E8459AA000947BF /* AppDelegate.swift in Sources */,
 				FAF025FF1E846351000947BF /* ResetPasswordViewController.swift in Sources */,
 				FAF026051E84648D000947BF /* TodoListTableViewController.swift in Sources */,

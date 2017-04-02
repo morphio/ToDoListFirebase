@@ -16,6 +16,7 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet weak var passwordTestField: CustomTextField!
     @IBOutlet weak var countryTextField: CustomTextField!
     fileprivate var pickerView : UIPickerView!
+    var server = Server()
     
     fileprivate var countryArray = [String]()
 
@@ -28,6 +29,7 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         }
         pickerView = UIPickerView()
         pickerView.delegate = self
+        pickerView.dataSource = self
         countryTextField.inputView = pickerView
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SignUpViewController.dismissController(gesture:)))
         tapGestureRecognizer.numberOfTapsRequired = 1
@@ -49,6 +51,10 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return countryArray.count
     }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
     //MARK: - UIImagePickerControllerDelegate -
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
@@ -60,13 +66,13 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         let title = NSAttributedString(string: countryArray[row], attributes: [NSForegroundColorAttributeName: UIColor.white])
         return title
     }
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
+    
     
     //MARK: - Actions -
     @IBAction func signUpButton(_ sender: Any) {
         
+        let data = UIImageJPEGRepresentation(self.userImageView.image!, 0.8)
+        server.signUp(email: emailTextField.text!, username: usernameTextField.text!, password: passwordTestField.text!, country: countryTextField.text!, data: data! as NSData!)
     }
     
     @IBAction func choosePictureAction(_ sender: Any) {
