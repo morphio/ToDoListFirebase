@@ -10,6 +10,9 @@ import UIKit
 
 class ResetPasswordViewController: UIViewController {
 
+    @IBOutlet weak var emailTextField: CustomTextField!
+    let server = Server()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,4 +24,7 @@ class ResetPasswordViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func resetPasswordAction(_ sender: Any) {
+        server.resetPassword(email: emailTextField.text!)
+    }
 }

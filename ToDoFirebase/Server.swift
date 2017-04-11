@@ -33,10 +33,10 @@ struct Server {
         userRef.setValue(userInfo)
         
         //sign in
-        signIp(email: user.email!, password: password)
+        signIn(email: user.email!, password: password)
     }
     
-    func signIp(email: String, password: String) {
+    func signIn(email: String, password: String) {
         FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
             if error == nil {
                 if let user = user{
@@ -87,6 +87,15 @@ struct Server {
         FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
             if error == nil{
                 self.setUserInfo(user: user, username: username, password: password, country: country, data: data)
+            }else{
+                print(error!.localizedDescription)
+            }
+        })
+    }
+    func resetPassword(email: String)  {
+        FIRAuth.auth()?.sendPasswordReset(withEmail: email, completion: { (error) in
+            if error == nil{
+                print("reset your password")
             }else{
                 print(error!.localizedDescription)
             }

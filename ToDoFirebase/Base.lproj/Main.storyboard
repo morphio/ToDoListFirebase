@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -14,7 +14,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="ToDoFirebase" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LogIn" id="BYZ-38-t0r" customClass="LoginViewController" customModule="ToDoFirebase" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -81,6 +81,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <action selector="logInAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cDm-iM-m45"/>
                                             <segue destination="gFd-Mu-AzK" kind="show" id="wxK-kO-ENJ"/>
                                         </connections>
                                     </button>
@@ -133,10 +134,14 @@
                             <constraint firstItem="8TE-5N-gnh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="84" id="qNc-bZ-ygx"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="mdw-En-B9p" id="6fJ-GF-Uhn"/>
+                        <outlet property="passwordTextField" destination="mgT-UL-01T" id="ejv-Zy-kTF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="22.5" y="32.74647887323944"/>
+            <point key="canvasLocation" x="0.0" y="32"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="q2N-XR-SL2">
@@ -197,7 +202,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uI9-OT-5Qc" customClass="CustomTextField" customModule="ToDoFirebase" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="76" width="374" height="60.333333333333314"/>
+                                        <rect key="frame" x="8" y="76" width="374" height="60"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="uI9-OT-5Qc" secondAttribute="height" multiplier="56:9" id="eW6-3f-r1n"/>
@@ -212,7 +217,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U2T-hn-X8W" customClass="CustomTextField" customModule="ToDoFirebase" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="144.33333333333331" width="374" height="60"/>
+                                        <rect key="frame" x="8" y="144" width="374" height="60"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="U2T-hn-X8W" secondAttribute="height" multiplier="56:9" id="CgM-Iu-9mZ"/>
@@ -227,7 +232,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Country" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ss8-4N-IVu" customClass="CustomTextField" customModule="ToDoFirebase" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="212.33333333333331" width="374" height="60"/>
+                                        <rect key="frame" x="8" y="212" width="374" height="60"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="ss8-4N-IVu" secondAttribute="height" multiplier="56:9" id="Y9p-EL-h9F"/>
@@ -242,12 +247,12 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oqD-KR-bhv" customClass="CustomButton" customModule="ToDoFirebase" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="288.33333333333337" width="374" height="60.333333333333314"/>
+                                        <rect key="frame" x="8" y="288" width="374" height="60"/>
                                         <color key="backgroundColor" red="0.053012309809999998" green="0.22995738590000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="oqD-KR-bhv" secondAttribute="height" multiplier="56:9" id="QwW-On-Sgt"/>
                                         </constraints>
-                                        <state key="normal" title="Button">
+                                        <state key="normal" title="Sign Up">
                                             <color key="titleColor" white="0.96999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -257,10 +262,11 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="signUpButton:" destination="ic9-NP-sCr" eventType="touchUpInside" id="bjv-La-beB"/>
+                                            <segue destination="gFd-Mu-AzK" kind="show" id="A8s-rj-Nj4"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5dB-Ak-M9b" customClass="CustomButton" customModule="ToDoFirebase" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="356.66666666666663" width="374" height="60"/>
+                                        <rect key="frame" x="8" y="356" width="374" height="60"/>
                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="5dB-Ak-M9b" secondAttribute="height" multiplier="56:9" id="8bz-T9-VPQ"/>
@@ -334,7 +340,7 @@
             </objects>
             <point key="canvasLocation" x="960" y="518.66197183098598"/>
         </scene>
-        <!--Todo List Table View Controller-->
+        <!--Tasks-->
         <scene sceneID="tfi-LL-wgH">
             <objects>
                 <tableViewController id="9CA-KJ-W1V" customClass="TodoListTableViewController" customModule="ToDoFirebase" customModuleProvider="target" sceneMemberID="viewController">
@@ -344,10 +350,10 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="133" id="crf-ly-Kst">
-                                <rect key="frame" x="0.0" y="55.333333333333336" width="414" height="133"/>
+                                <rect key="frame" x="0.0" y="55.5" width="414" height="133"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="crf-ly-Kst" id="6GR-I3-tyr">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="132.66666666666666"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="133"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fi3-44-48y">
@@ -404,7 +410,7 @@
                             <outlet property="delegate" destination="9CA-KJ-W1V" id="1C6-pz-2ct"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="woM-Pd-sQU">
+                    <navigationItem key="navigationItem" title="Tasks" id="woM-Pd-sQU">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="lkI-oB-P8i">
                             <connections>
                                 <segue destination="cxX-Pc-aF6" kind="show" id="2aD-Mh-bjz"/>
@@ -431,7 +437,7 @@
                                         <rect key="frame" x="0.0" y="35" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="irJ-Az-6KI" id="bmf-dt-Vp7">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter task name" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="L87-Zm-OHK">
@@ -460,7 +466,7 @@
                                         <rect key="frame" x="0.0" y="115" width="414" height="189"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GuY-xR-6JX" id="QcJ-dv-EZL">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="188.66666666666666"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="188.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="Enter task description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RC8-jN-e6d">
@@ -525,6 +531,9 @@
                                                 <real key="value" value="13"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="resetPasswordAction:" destination="5KS-sd-YRW" eventType="touchUpInside" id="xkO-eP-Hg2"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type Your Email" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="0j4-CU-AnK" customClass="CustomTextField" customModule="ToDoFirebase" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="100" width="280" height="45"/>
@@ -577,16 +586,19 @@
                             <constraint firstItem="MIQ-k1-KRp" firstAttribute="centerX" secondItem="Nh6-s8-ann" secondAttribute="centerX" id="yKv-tT-YAT"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="0j4-CU-AnK" id="Dfv-KD-yp5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FvR-6W-xLc" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="K7z-a5-3eg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="852" y="-478"/>
+            <point key="canvasLocation" x="960" y="-494"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="kT7-3P-f5p">
             <objects>
-                <tabBarController id="gFd-Mu-AzK" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TodoList" id="gFd-Mu-AzK" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="9MV-WM-LCx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -645,7 +657,7 @@
         <!--Profile-->
         <scene sceneID="5hw-U3-lo1">
             <objects>
-                <viewController id="VD1-Ra-U9C" sceneMemberID="viewController">
+                <viewController id="VD1-Ra-U9C" customClass="ProfileViewController" customModule="ToDoFirebase" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="syT-b5-X02"/>
                         <viewControllerLayoutGuide type="bottom" id="8o0-1I-5wq"/>
@@ -775,33 +787,24 @@
                             <constraint firstItem="8o0-1I-5wq" firstAttribute="top" secondItem="Qcz-5J-6er" secondAttribute="bottom" constant="20" id="w7c-Mg-hF2"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Profile" id="Uy6-mO-cyH"/>
+                    <navigationItem key="navigationItem" title="Profile" id="Uy6-mO-cyH">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="mMH-Vl-Xfv">
+                            <connections>
+                                <action selector="logOutAction:" destination="VD1-Ra-U9C" id="XeG-BS-7fa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ODX-B0-ol3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3869.5999999999999" y="441.22938530734638"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="pVL-Bb-TVp">
-            <objects>
-                <viewController id="Nl5-Rb-PfU" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="nUz-3G-Yx3"/>
-                        <viewControllerLayoutGuide type="bottom" id="AnR-86-Nfr"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="5wM-tV-T9n">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ogA-Dd-j0S" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4530" y="450"/>
         </scene>
     </scenes>
     <resources>
         <image name="ToDoIcon" width="512" height="512"/>
         <image name="user_placeholder" width="600" height="600"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="wxK-kO-ENJ"/>
+    </inferredMetricsTieBreakers>
 </document>

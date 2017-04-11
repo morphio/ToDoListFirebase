@@ -73,6 +73,7 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         
         let data = UIImageJPEGRepresentation(self.userImageView.image!, 0.8)
         server.signUp(email: emailTextField.text!, username: usernameTextField.text!, password: passwordTestField.text!, country: countryTextField.text!, data: data! as NSData!)
+
     }
     
     @IBAction func choosePictureAction(_ sender: Any) {

@@ -10,6 +10,10 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var emailTextField: CustomTextField!
+    @IBOutlet weak var passwordTextField: CustomTextField!
+    let server = Server()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,4 +23,11 @@ class LoginViewController: UIViewController {
         
     }
 
+    @IBAction func logInAction(_ sender: Any) {
+        server.signIn(email: emailTextField.text!, password: passwordTextField.text!)
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TodoList")
+        present(vc, animated: true, completion: nil)
+        
+        
+    }
 }
