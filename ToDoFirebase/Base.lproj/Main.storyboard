@@ -794,6 +794,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="country" destination="KzK-sU-BXc" id="4Sf-X2-WBx"/>
+                        <outlet property="email" destination="WjA-2J-MUh" id="DZ3-5l-AM1"/>
+                        <outlet property="password" destination="oGm-tO-sLQ" id="XG4-mi-PVK"/>
+                        <outlet property="userImageView" destination="il9-dL-B5K" id="VTd-T4-cTw"/>
+                        <outlet property="username" destination="1wW-gQ-wV2" id="uZi-A8-tJT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ODX-B0-ol3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
