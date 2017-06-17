@@ -496,9 +496,17 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="ToDo List" id="Te1-Mx-Y3J">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="rwG-4C-uX9"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="rwG-4C-uX9">
+                            <connections>
+                                <action selector="saveAction:" destination="cxX-Pc-aF6" id="iaT-75-EKP"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="descriptionTextView" destination="RC8-jN-e6d" id="pWF-O2-o79"/>
+                        <outlet property="taskTextField" destination="L87-Zm-OHK" id="CBP-7g-zaH"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rVW-nR-Ohy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

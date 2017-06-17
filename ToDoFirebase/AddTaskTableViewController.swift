@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class AddTaskTableViewController: UITableViewController {
 
+    @IBOutlet weak var taskTextField: UITextField!
+    @IBOutlet weak var descriptionTextView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,4 +25,6 @@ class AddTaskTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func saveAction(_ sender: Any) {
+    }
 }
