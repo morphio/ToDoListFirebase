@@ -38,7 +38,10 @@ class Task:NSObject {
         self.username = values["username"] as! String
         self.color = values["color"] as! UIColor
         self.key = values["key"] as! String
-        
+        self.reference = snapshot.ref
     }
     
+    func stringToAny() -> [String: Any] {
+        return ["title" : title, "desc": desc, "username": username, "color": color, "key" : key,  ]
+    }
 }
