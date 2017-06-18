@@ -349,7 +349,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="133" id="crf-ly-Kst">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="133" id="crf-ly-Kst" customClass="TaskTableViewCell" customModule="ToDoFirebase" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="55.5" width="414" height="133"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="crf-ly-Kst" id="6GR-I3-tyr">
@@ -376,7 +376,7 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To Do item name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ulf-SR-uOI">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ulf-SR-uOI">
                                             <rect key="frame" x="13" y="41" width="363" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="pwq-PZ-Nn7"/>
@@ -403,6 +403,11 @@
                                         <constraint firstItem="PcW-vY-yN7" firstAttribute="top" secondItem="6GR-I3-tyr" secondAttribute="topMargin" constant="5" id="xUP-1W-U2s"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="taskDescriptionTextView" destination="U1X-p4-cnB" id="HYW-0d-jcZ"/>
+                                    <outlet property="taskNameLabel" destination="Ulf-SR-uOI" id="o80-b4-bZz"/>
+                                    <outlet property="usernameLabel" destination="fi3-44-48y" id="iY6-32-I6r"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -422,7 +427,7 @@
             </objects>
             <point key="canvasLocation" x="3692" y="-480"/>
         </scene>
-        <!--ToDo List-->
+        <!--Add New Task-->
         <scene sceneID="beB-wQ-N6Y">
             <objects>
                 <tableViewController id="cxX-Pc-aF6" customClass="AddTaskTableViewController" customModule="ToDoFirebase" customModuleProvider="target" sceneMemberID="viewController">
@@ -494,7 +499,7 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="ToDo List" id="Te1-Mx-Y3J">
+                    <navigationItem key="navigationItem" title="Add New Task" id="Te1-Mx-Y3J">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="rwG-4C-uX9">
                             <connections>
                                 <action selector="saveAction:" destination="cxX-Pc-aF6" id="iaT-75-EKP"/>

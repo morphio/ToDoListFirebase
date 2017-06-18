@@ -14,6 +14,7 @@
 		FA5313BB1E8C772100CBAA2C /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5313BA1E8C772100CBAA2C /* ProfileImageView.swift */; };
 		FA5313BD1E8C7B1200CBAA2C /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5313BC1E8C7B1200CBAA2C /* CustomButton.swift */; };
 		FA5313BF1E8C7D5C00CBAA2C /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5313BE1E8C7D5C00CBAA2C /* CustomTextField.swift */; };
+		FA726D7A1EF6893C007DEE64 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA726D791EF6893C007DEE64 /* TaskTableViewCell.swift */; };
 		FAECB44A1E919035000BDCD1 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAECB4491E919035000BDCD1 /* Server.swift */; };
 		FAF025E21E8459AA000947BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF025E11E8459AA000947BF /* AppDelegate.swift */; };
 		FAF025E71E8459AA000947BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAF025E51E8459AA000947BF /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 		FA5313BA1E8C772100CBAA2C /* ProfileImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileImageView.swift; sourceTree = "<group>"; };
 		FA5313BC1E8C7B1200CBAA2C /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		FA5313BE1E8C7D5C00CBAA2C /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		FA726D791EF6893C007DEE64 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 		FAECB4491E919035000BDCD1 /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		FAF025DE1E8459AA000947BF /* ToDoFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoFirebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF025E11E8459AA000947BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				FA5313BA1E8C772100CBAA2C /* ProfileImageView.swift */,
 				FA5313BC1E8C7B1200CBAA2C /* CustomButton.swift */,
 				FA5313BE1E8C7D5C00CBAA2C /* CustomTextField.swift */,
+				FA726D791EF6893C007DEE64 /* TaskTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA726D7A1EF6893C007DEE64 /* TaskTableViewCell.swift in Sources */,
 				FAF025FD1E8462DA000947BF /* SignUpViewController.swift in Sources */,
 				FA5313BB1E8C772100CBAA2C /* ProfileImageView.swift in Sources */,
 				FAF026031E8463D6000947BF /* AddTaskTableViewController.swift in Sources */,
