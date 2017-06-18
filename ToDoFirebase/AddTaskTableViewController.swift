@@ -60,6 +60,8 @@ class AddTaskTableViewController: UITableViewController {
         
         taskRef.setValue(task.toAnyObject())
         
+        self.navigationController?.popToRootViewController(animated: true)
+        
     }
     
 }
