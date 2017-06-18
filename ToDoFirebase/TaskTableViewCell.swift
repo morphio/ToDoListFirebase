@@ -13,9 +13,12 @@ class TaskTableViewCell: UITableViewCell {
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var taskNameLabel: UILabel!
     @IBOutlet weak var taskDescriptionTextView: UITextView!
+    @IBOutlet weak var colorView: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
+        colorView.layer.cornerRadius = 10;
     }
 
 

@@ -349,7 +349,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="133" id="crf-ly-Kst" customClass="TaskTableViewCell" customModule="ToDoFirebase" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="133" id="crf-ly-Kst" customClass="TaskTableViewCell" customModule="ToDoFirebase" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="55.5" width="414" height="133"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="crf-ly-Kst" id="6GR-I3-tyr">
@@ -404,6 +404,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="colorView" destination="PcW-vY-yN7" id="lpQ-Z8-9MV"/>
                                     <outlet property="taskDescriptionTextView" destination="U1X-p4-cnB" id="HYW-0d-jcZ"/>
                                     <outlet property="taskNameLabel" destination="Ulf-SR-uOI" id="o80-b4-bZz"/>
                                     <outlet property="usernameLabel" destination="fi3-44-48y" id="iY6-32-I6r"/>

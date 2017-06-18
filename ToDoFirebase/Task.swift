@@ -10,7 +10,7 @@ import Foundation
 import Firebase
 import FirebaseDatabase
 
-class Task:NSObject {
+struct Task {
     
     var title: String!
     var desc: String! // description
@@ -35,15 +35,15 @@ class Task:NSObject {
     }
     
     init(snapshot: FIRDataSnapshot){
-        let values = snapshot.value as! [String: Any]
-        
-        self.title = values["title"] as! String
-        self.desc = values["desc"] as! String
-        self.username = values["username"] as! String
+        let values = snapshot.value as! [String: AnyObject]
+
+        self.title = values["title"] as? String
+        self.desc = values["desc"] as? String
+        self.username = values["username"] as? String
+        self.key = values["key"] as? String
         self.red = values["red"] as! CGFloat
-        self.blue = values["red"] as! CGFloat
-        self.green = values["red"] as! CGFloat
-        self.key = values["key"] as! String
+        self.blue = values["blue"] as! CGFloat
+        self.green = values["green"] as! CGFloat
         self.reference = snapshot.ref
     }
     
